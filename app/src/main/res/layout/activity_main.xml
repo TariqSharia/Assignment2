@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/name_edittxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:ems="10"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/height_editxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name_edittxt"
+        android:layout_marginTop="2dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="CalculateBMI"
+        android:ems="10"
+        android:hint="Height"
+        android:inputType="numberSigned" />
+
+    <EditText
+        android:id="@+id/weight_edittxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Weight"
+        android:layout_centerHorizontal="true"
+        android:onClick="CalculateBMI"
+        android:layout_below="@id/height_editxt"
+        android:inputType="numberSigned" />
+
+    <Spinner
+        android:id="@+id/gender_spinner"
+        android:layout_width="210dp"
+        android:layout_height="47dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/weight_edittxt" />
+
+    <CheckBox
+        android:id="@+id/save_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save info"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/gender_spinner"
+        android:padding="10dp"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bmi_txt"
+        android:layout_below="@id/save_checkbox"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:padding="15dp"/>
+
+    <Button
+        android:id="@+id/timer_btn"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:text="Log in"
+        android:padding="15dp"
+        android:onClick="StartTimer"/>
+
+
+</RelativeLayout>

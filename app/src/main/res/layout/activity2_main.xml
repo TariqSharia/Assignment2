@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/hours_edittxt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@id/minutes_edittxt"
+        android:text="00"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/minutes_edittxt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_margin="5dp"
+        android:text="00"
+        android:gravity="center"
+        android:padding="5dp"/>
+
+    <EditText
+        android:id="@+id/seconds_edittxt"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:ems="10"
+        android:layout_toRightOf="@id/minutes_edittxt"
+        android:inputType="numberDecimal"
+        android:text="00"
+        android:gravity="center"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/hours_txtview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        android:visibility="invisible"
+        android:layout_toLeftOf="@id/minutes_edittxt"
+        android:text="00"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/minutes_txtview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:visibility="invisible"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:inputType="numberDecimal"
+        android:layout_margin="5dp"
+        android:text="00"
+        android:gravity="center"
+        android:padding="5dp"/>
+
+    <TextView
+        android:id="@+id/seconds_txtview"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:visibility="invisible"
+        android:ems="10"
+        android:layout_toRightOf="@id/minutes_edittxt"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:inputType="numberDecimal"
+        android:text="00"
+        android:gravity="center"
+        android:padding="5dp"/>
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/minutes_edittxt"
+        android:text="Start"
+        android:onClick="btnStartOnClick"
+        android:padding="10dp"/>
+
+    <Button
+        android:id="@+id/pause_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_btn"
+        android:layout_centerHorizontal="true"
+        android:text="Pause"
+        android:onClick="btnPauseClick"
+        android:padding="5dp"/>
+
+    <Button
+        android:id="@+id/stop_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/pause_btn"
+        android:onClick="btnStopClick"
+        android:text="Stop"
+        android:padding="5dp"/>
+</RelativeLayout>
